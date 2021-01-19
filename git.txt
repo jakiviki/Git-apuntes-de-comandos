@@ -1,0 +1,118 @@
+comandos:
+para empezar en la nube con github:
+git remote add origin git@github.com:jakiviki/Git-apuntes-de-comandos.git
+git push -u origin main
+
+si por error quiero cambiar la direcion de github:
+git remote rename origin old-origin
+git remote add origin git@github.com:jakiviki/Git-apuntes-de-comandos.git
+
+git init
+git add
+git commit -m "lslsls"
+
+git commit -am "lo que quiera" 
+este solo funciona si ya hice un git add primero 
+
+git config:
+muestra todas las configuraciones de git
+
+git config --list:
+te muestra por defecto tu configuracion
+
+git config --global user.name "mi nombre":
+configura mi nombre en git.
+
+git config --global user.email "jakiviki":
+configura mi email
+
+conectamos nuestro entorno local con el remoto:
+git remote add origin git@github.com:hecto...
+
+para bajarnos algo de github:
+git pull origin (rama)
+
+para subir algo a github:
+git push origin (rama que quiero subir)
+
+staging area:
+es la memoria cache
+
+Repositorio: 
+es la carpeta .git y esta en el disco duro se le llama master.
+
+git remote -v:
+nos muestra donde esta alojado en el remoto(nube)
+
+git fecth: 
+se baja de la nube a el repositorio y luego tienes que hacer un merge a tu directorio.
+
+git pull: 
+te baja a el repositorio y a tu directorio (no hace falta el merge)
+
+git show (archivo.ejm): 
+te muestra el historial del archivo
+
+git reset  --hard lksksoskk4444949584049  
+nos lleva al commit que hemos introducido es decir a su estado antereior en todos los sitios, directorio,staging y repositorio y los borra.la diferencia con checkout es que aqui no podemos volver al presente. 
+
+git reset ksksosksjsoskkjs55o5  --soft: 
+los mismo pero respeta el staging 
+
+git diff : 
+a) puedo ver las diferencias entre el directorio el staging y el repositorio a la vez.
+b) ademas puedo comparar log 
+
+git checkout (donde quiero ir eje master o llslsliejskoeie) texto.txt:
+me lleva al sitio del archivo elegio en ese momento. de esta manera puedo volver atras en el tiempo para hacer cambios y lanzar de nuevo a la rama master.
+
+git log --oneline
+te muestra solo una linea
+
+git log --stat: 
+te muestra el log con mas detalles de los cambios resalizados
+
+git log -p 
+te dice exactamente donde y cual es el cambio que se realizo
+
+git shortlog
+te muestra lo que cada desarrollador hizo en cada rama
+
+git log --all --graph --decorate --oneline:
+te muestra las ramas
+
+git log --prety=format: "string "
+nos permite mostrar mensajes personalizados de los commit
+
+filtros
+git log --after="today"
+busca despues de hoy
+git log --before="today"
+busca antes de hoy
+git log --author="jakivike"
+
+git log --grep="palabra"
+busca entre los commits los que tengan esa palaabra
+
+git log --archivo.html
+te busca cuando se creo
+
+git config --global alias.co checkout
+
+
+alias (nombre)="git log --all --graph --decorate --online":
+te reduce el comando a una palabra en este caso (nombre)
+
+git tag -a (nombre ejem= v0.1) -m "resultado de la suma" (coloco el tag):
+
+git tag:
+te muestra el tag
+
+git show-ref --tags: 
+te muestra la referencia de ese tag
+
+git push origin --tags:
+te los envia a git hub
+
+git  commit -m "los que quiera ejem" --amend 
+rectifica el commit antiguo o ultimo por el que acabo de crear
