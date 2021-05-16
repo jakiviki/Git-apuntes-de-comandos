@@ -116,3 +116,4 @@ te los envia a git hub
 
 git  commit -m "los que quiera ejem" --amend 
 rectifica el commit antiguo o ultimo por el que acabo de crear
+---------------------------------------------
